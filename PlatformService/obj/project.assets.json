@@ -4614,19 +4614,21 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AFREE\\Documents\\MicroservicesDemoProject\\PlatformService\\PlatformService.csproj",
+      "projectUniqueName": "C:\\Users\\AFREE\\Documents\\MicroservicesDemoProject\\MicroservicesDemo\\PlatformService\\PlatformService.csproj",
       "projectName": "PlatformService",
-      "projectPath": "C:\\Users\\AFREE\\Documents\\MicroservicesDemoProject\\PlatformService\\PlatformService.csproj",
+      "projectPath": "C:\\Users\\AFREE\\Documents\\MicroservicesDemoProject\\MicroservicesDemo\\PlatformService\\PlatformService.csproj",
       "packagesPath": "C:\\Users\\AFREE\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AFREE\\Documents\\MicroservicesDemoProject\\PlatformService\\obj\\",
+      "outputPath": "C:\\Users\\AFREE\\Documents\\MicroservicesDemoProject\\MicroservicesDemo\\PlatformService\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\AFREE\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\AFREE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "C:\\Users\\AFREE\\Downloads\\Nugetlocal": {},
         "https://api.nuget.org/v3/index.json": {},
         "https://www.myget.org/F/umbracoprereleases/api/v3/index.json": {}
@@ -4702,7 +4704,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
