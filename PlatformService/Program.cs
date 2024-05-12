@@ -14,7 +14,7 @@ builder.Services.AddControllers();
 var app = builder.Build();
 
 app.UseRouting();
-app.MapGet("/", () => "Hello World!");
+app.MapGet("/", () => "Platforms Service");
 
 // Configure the HTTP request pipeline.
 

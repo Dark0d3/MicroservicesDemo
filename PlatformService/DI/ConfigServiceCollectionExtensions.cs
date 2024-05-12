@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore;
 using PlatformService.Data;
 using PlatformService.Repositories;
 using PlatformService.Repositories.Interfaces;
+using PlatformService.SyncDataServices.Http;
+using PlatformService.SyncDataServices.Http.Interfaces;
 
 namespace PlatformService.DI
 {
@@ -15,6 +17,7 @@ namespace PlatformService.DI
         {
             services.AddDbContext<AppDbContext>(opt => opt.UseInMemoryDatabase("InMem"));
             services.AddScoped<IPlatformRepo, PlatformRepo>();
+            services.AddHttpClient<ICommandDataClient, CommandDataClient>();
 
             return services;
         }
