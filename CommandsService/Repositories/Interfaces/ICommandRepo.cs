@@ -13,6 +13,7 @@ namespace CommandsService.Repositories.Interfaces
         IEnumerable<Platform> GetAllPlatforms();
         void CreatePlatform(Platform plat);
         bool PlatformExists(int platformId);
+        bool ExternalPlatformsExist(int externalPlatformId);
 
         //commands
         IEnumerable<Command> GetCommandsForPlatforms(int platformId);

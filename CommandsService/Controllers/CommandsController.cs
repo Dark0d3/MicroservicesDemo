@@ -38,10 +38,7 @@ namespace CommandsService.Controllers
         }
 
         [HttpGet("{commandId}", Name = "GetCommandForPlatform")]
-        public ActionResult<IEnumerable<CommandReadDto>> GetCommandForPlatform(
-            int platformId,
-            int commandId
-        )
+        public ActionResult<CommandReadDto> GetCommandForPlatform(int platformId, int commandId)
         {
             Console.WriteLine($"--> Hit GetCommandForPlatform with Id :{platformId} / {commandId}");
 
@@ -55,7 +52,7 @@ namespace CommandsService.Controllers
             {
                 return NotFound();
             }
-            return Ok(_mapper.Map<IEnumerable<CommandReadDto>>(command));
+            return Ok(_mapper.Map<CommandReadDto>(command));
         }
 
         [HttpPost]

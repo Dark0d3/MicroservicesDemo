@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 using PlatformService.AsyncDataServices.Interfaces;
 using PlatformService.Dtos;
 using RabbitMQ.Client;
@@ -22,7 +23,7 @@ namespace PlatformService.AsyncDataServices
             var factory = new ConnectionFactory()
             {
                 HostName = _configuration["RabbitMQHost"],
-                Port = int.Parse(_configuration["RabbitMQPort"])
+                Port = int.Parse(_configuration["RabbitMQPort"]!)
             };
             try
             {
