@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using PlatformService.AsyncDataServices.Interfaces;
 using PlatformService.Dtos;
 using PlatformService.Models;
 using PlatformService.Repositories.Interfaces;
@@ -18,16 +19,19 @@ namespace PlatformService.Controllers
         private readonly IPlatformRepo _repository;
         private readonly IMapper _mapper;
         private readonly ICommandDataClient _commandDataClient;
+        private readonly IMessageBusClient _messageBusClient;
 
         public PlatformsController(
             IPlatformRepo repo,
             IMapper mapper,
-            ICommandDataClient commandDataClient
+            ICommandDataClient commandDataClient,
+            IMessageBusClient messageBusClient
         )
         {
             _repository = repo;
             _mapper = mapper;
             _commandDataClient = commandDataClient;
+            _messageBusClient = messageBusClient;
         }
 
         [HttpGet]
@@ -61,7 +65,7 @@ namespace PlatformService.Controllers
             _repository.SaveChanges();
 
             var PlatformReadDto = _mapper.Map<PlatformReadDto>(platformModel);
-
+            //send sync message
             try
             {
                 await _commandDataClient.SendPlatformToCommand(PlatformReadDto);
@@ -70,6 +74,19 @@ namespace PlatformService.Controllers
             {
                 Console.WriteLine($"--> could not send {ex.Message}");
             }
+
+            //send async meesage
+            try
+            {
+                var platformPublishedDto = _mapper.Map<PlatformPublishedDto>(PlatformReadDto);
+                platformPublishedDto.Event = "Platform_Published";
+                _messageBusClient.PublishNewPlatform(platformPublishedDto);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"--> could not send async {ex.Message}");
+            }
+
             return CreatedAtRoute(
                 nameof(GetPlatformsById),
                 new { Id = PlatformReadDto.Id },

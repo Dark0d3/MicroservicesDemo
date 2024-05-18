@@ -140,3 +140,4 @@ C:\Users\AFREE\Documents\MicroservicesDemoProject\MicroservicesDemo\PlatformServ
 C:\Users\AFREE\Documents\MicroservicesDemoProject\MicroservicesDemo\PlatformService\obj\Debug\net8.0\PlatformService.genruntimeconfig.cache
 C:\Users\AFREE\Documents\MicroservicesDemoProject\MicroservicesDemo\PlatformService\obj\Debug\net8.0\ref\PlatformService.dll
 C:\Users\AFREE\Documents\MicroservicesDemoProject\MicroservicesDemo\PlatformService\bin\Debug\net8.0\appsettings.Production.json
+C:\Users\AFREE\Documents\MicroservicesDemoProject\MicroservicesDemo\PlatformService\bin\Debug\net8.0\RabbitMQ.Client.dll
