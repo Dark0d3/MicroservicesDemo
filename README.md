@@ -1,6 +1,8 @@
 # MicroservicesDemo
 
-## Learning Microservices with .NET, RabbitMQ, and Docker
+This repository demonstrates how to set up and manage a microservices architecture using .NET, RabbitMQ, Docker, and Kubernetes. It includes essential commands for building, running, and managing Docker containers, as well as deploying and managing applications in a Kubernetes cluster. The goal is to provide a comprehensive guide for developers to get started with microservices and container orchestration.
+
+## Learning Microservices with .NET, RabbitMQ, Docker, Kubernetes and Grpc
 
 ### Docker Commands
 
