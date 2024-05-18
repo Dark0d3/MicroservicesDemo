@@ -1,3 +1,4 @@
+using CommandsService.Data;
 using CommandsService.DI;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,4 +20,6 @@ app.MapGet("/", () => "Commands Service!");
 
 app.MapControllers();
 
+//app.UseHttpsRedirection();
+PrepDb.PrepPopulation(app);
 app.Run();

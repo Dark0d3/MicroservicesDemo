@@ -1,5 +1,6 @@
 using PlatformService.Data;
 using PlatformService.DI;
+using PlatformService.SyncDataServices.Grpc;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,11 +19,20 @@ var app = builder.Build();
 
 app.UseRouting();
 app.MapGet("/", () => "Platforms Service");
+app.MapGrpcService<GrpcPlatformService>();
+app.MapGet(
+    "/protos/platforms.proto",
+    async context =>
+    {
+        await context.Response.WriteAsync(File.ReadAllText("Protos/platforms.proto"));
+    }
+);
 
 // Configure the HTTP request pipeline.
 
 app.MapControllers();
 
+//app.UseHttpsRedirection();
 PrepDb.PrepPopulation(app, env.IsProduction());
 
 app.Run();

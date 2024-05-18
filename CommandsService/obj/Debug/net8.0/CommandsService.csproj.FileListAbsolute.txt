@@ -107,3 +107,7 @@ C:\Users\AFREE\Documents\MicroservicesDemoProject\MicroservicesDemo\CommandsServ
 C:\Users\AFREE\Documents\MicroservicesDemoProject\MicroservicesDemo\CommandsService\obj\Debug\net8.0\ref\CommandsService.dll
 C:\Users\AFREE\Documents\MicroservicesDemoProject\MicroservicesDemo\CommandsService\bin\Debug\net8.0\appsettings.Production.json
 C:\Users\AFREE\Documents\MicroservicesDemoProject\MicroservicesDemo\CommandsService\bin\Debug\net8.0\RabbitMQ.Client.dll
+C:\Users\AFREE\Documents\MicroservicesDemoProject\MicroservicesDemo\CommandsService\bin\Debug\net8.0\Google.Protobuf.dll
+C:\Users\AFREE\Documents\MicroservicesDemoProject\MicroservicesDemo\CommandsService\bin\Debug\net8.0\Grpc.Core.Api.dll
+C:\Users\AFREE\Documents\MicroservicesDemoProject\MicroservicesDemo\CommandsService\bin\Debug\net8.0\Grpc.Net.Client.dll
+C:\Users\AFREE\Documents\MicroservicesDemoProject\MicroservicesDemo\CommandsService\bin\Debug\net8.0\Grpc.Net.Common.dll

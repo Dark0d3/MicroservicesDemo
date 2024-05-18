@@ -37,6 +37,7 @@ namespace PlatformService.DI
             services.AddScoped<IPlatformRepo, PlatformRepo>();
             services.AddHttpClient<ICommandDataClient, CommandDataClient>();
             services.AddSingleton<IMessageBusClient, MessageBusClient>();
+            services.AddGrpc();
 
             return services;
         }

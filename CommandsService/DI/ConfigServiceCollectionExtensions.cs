@@ -8,6 +8,8 @@ using CommandsService.EventProcessing;
 using CommandsService.EventProcessing.Interfaces;
 using CommandsService.Repositories;
 using CommandsService.Repositories.Interfaces;
+using CommandsService.SyncDataServices.Grpc;
+using CommandsService.SyncDataServices.Grpc.Interfaces;
 using Microsoft.EntityFrameworkCore;
 
 namespace CommandsService.DI
@@ -20,6 +22,7 @@ namespace CommandsService.DI
             services.AddScoped<ICommandRepo, CommandRepo>();
             services.AddSingleton<IEventProcessor, EventProcessor>();
             services.AddHostedService<MessageBusSubscriber>();
+            services.AddScoped<IPlatformDataClient, PlatformDataClient>();
 
             return services;
         }
